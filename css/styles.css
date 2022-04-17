@@ -1,0 +1,453 @@
+/*@import '_normalise.css'
+html{
+    box-sizing: border-box;
+}
+*,
+*::after, 
+::before {
+    box-sizing: inherit;
+}
+    */
+/*document's colors
+цвет заголовков #212121
+цвет текста #757575
+акцент #2196F3
+footer background #2F303A
+
+document's fonts
+Raleway, normal, 700;
+Roboto, normal, 400, 500, 700, 900;
+*/
+:root {
+  --primary-background-color: #fff;
+  --secondary-background-color: #f5f4fa;
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  --accent-background-color: #2f303a;
+  --primary-white: #fff;
+  --primary-button-color: #f5f4fa;
+  --button-hover-color: #188ce8;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+}
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-text-color);
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+p {
+  margin: 0;
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+address {
+  font-style: normal;
+}
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #ececec;
+  /*outline: 1px solid red;*/
+}
+.main-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* align-items: center; - не працює, бо не flex*/
+
+  /* outline: 1px solid red;*/
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.section-title {
+  margin-bottom: 50px;
+}
+.button-base {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+}
+
+/*index.html*/
+/*логотип*/
+.logo {
+  display: inline-block;
+
+  color: #000;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  margin-right: 95px;
+}
+.logo-accent {
+  color: var(--accent-color);
+}
+/*навигация*/
+.navigation {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  /*outline: 1px solid red;*/
+}
+.navigation-list {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+/*Спосіб №1 Як позбутись крайньої геометрії*/
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/*Спосіб №2 Як позбутись крайньої геометрії*/
+/*.navigation-item {        
+  margin-right: 50px;
+}
+.navigation-item:last-child {
+  margin-right: 0%;
+}*/
+
+/*Спосіб №3 Як позбутись крайньої геометрії - застосується до всіх, крім першого
+.navigation-item + .navigation-item {
+  margin-left: 50px;
+}*/
+.navigation-link {
+  display: block;
+  /*padding-top: 32px;
+  padding-bottom: 32px;*/
+
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+.navigation-link:hover,
+.navigation-link:focus {
+  color: var(--accent-color);
+}
+/*контакты*/
+.contacts-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts-link {
+  display: inline-block;
+  /* padding-top: 32px;
+  padding-bottom: 32px;*/
+
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
+
+/*hero*/
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: var(--accent-background-color);
+
+  /*outline: 1px solid red;*/
+}
+.hero-title {
+  color: var(--primary-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+.button-primary {
+  padding: 6px 20px;
+  border-radius: 4px;
+
+  background-color: var(--primary-button-color);
+  color: var(--secondary-text-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-style: none;
+}
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--button-hover-color);
+  color: var(--primary-white);
+}
+.button-primary:active {
+  background-color: var(--accent-color);
+  color: var(--primary-white);
+}
+.button-order {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  margin: 0 auto;
+
+  background-color: var(--accent-color);
+  color: var(--primary-white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.button-order:hover,
+.button-order:focus {
+  background-color: var(--button-hover-color);
+}
+
+/*our goals*/
+.goals {
+  padding-top: 95px;
+  padding-bottom: 95px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.goals-main-title {
+  width: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+.goals-content {
+  max-width: 270px;
+}
+.goals-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.goals-item:not(:last-child) {
+  margin-right: 30px;
+}
+/*about*/
+.about {
+  padding-bottom: 95px;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-content {
+  width: 370px;
+}
+/*team*/
+.team {
+  background-color: var(--secondary-background-color);
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.member-card {
+  width: 270px;
+  min-height: 368px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  text-align: center;
+
+  background-color: var(--primary-white);
+}
+.member-photo {
+  display: block;
+  width: 270px;
+  max-height: 260px;
+  margin: 0;
+}
+.member-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.member-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-transform: initial;
+  margin-bottom: 10px;
+}
+.member-position {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+/*footer*/
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--accent-background-color);
+}
+.footer-logo {
+  display: block;
+  color: var(--primary-white);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  margin-bottom: 20px;
+}
+.adress-text {
+  color: var(--footer-text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.location {
+  color: var(--primary-white);
+}
+.adress-text:hover,
+.adress-text:focus {
+  color: var(--accent-color);
+}
+.adress-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+/*portfolio.html*/
+.portfolio {
+  padding-top: 95px;
+  padding-bottom: 95px;
+
+  /* outline: 1px solid red;*/
+}
+.portfolio-title {
+  display: none;
+
+  /* outline: 1px solid red;*/
+}
+/*portfolio filter*/
+.portfolio-filter {
+  margin-bottom: 50px;
+
+  padding-left: auto;
+  padding-right: auto;
+}
+.portfolio-filter-list {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio-filter-list.flex-container {
+  justify-content: center;
+}
+.portfolio-filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+/*portfolio items*/
+.portfolio-list.flex-container {
+  flex-wrap: wrap;
+}
+.portfolio-list {
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.portfolio-item {
+  box-sizing: border-box;
+  width: 370px;
+  max-height: 405px;
+  border: 1px solid #eeeeee;
+
+  margin-left: 30px;
+  margin-top: 30px;
+
+  text-align: left;
+
+  background-color: var(--primary-white);
+
+  flex-basis: calc((100% - 90px) / 3);
+
+  /*outline: 1px solid red;*/
+}
+.portfolio-photo {
+  display: block;
+  width: 370px;
+  max-height: 295px;
+  margin: 0;
+}
+.portfolio-description {
+  /* width: 320px;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.portfolio-item-title {
+  display: block;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+
+  margin-bottom: 8px;
+}
+.portfolio-category {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.portfolio-item-link {
+  display: block;
+  text-decoration: none;
+}
