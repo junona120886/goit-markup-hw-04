@@ -29,6 +29,8 @@ Roboto, normal, 400, 500, 700, 900;
   --primary-button-color: #f5f4fa;
   --button-hover-color: #188ce8;
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --icon-primary-text-color: #afb1b8;
+  --clients-border-color: #afb1b8;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -90,6 +92,20 @@ address {
   align-items: center;
   justify-content: center;
   border-style: none;
+}
+/*icons*/
+.contacts-icon {
+  width: 16px;
+  height: 16px;
+}
+.social-icon {
+  width: 44px;
+  height: 44px;
+  /*fill: var(--icon-primary-text-color);*/
+}
+.social-icon :hover {
+  /*fill: var(--accent-color);*/
+  fill: var(--accent-color);
 }
 
 /*index.html*/
@@ -325,7 +341,60 @@ address {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 15px;
 }
+.member-social {
+  outline: 1px solid red;
+}
+.member-social-list {
+  justify-content: center;
+  outline: 1px solid red;
+}
+.member-social-link {
+  display: block;
+}
+.member-social-item {
+  width: 44px;
+  height: 44px;
+  outline: 1px solid red;
+}
+.member-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  justify-content: space-between;
+}
+.client-list-item {
+  width: 170px;
+  /*outline: 1px solid red;*/
+  text-align: center;
+}
+.client-item-link {
+  display: block;
+  color: var(--clients-border-color);
+}
+.client-item-link :hover,
+.client-item-link :focus {
+  color: var(--accent-color);
+}
+.client-item-content {
+  /*div*/
+  outline: 1px solid currentColor;
+  border: 1px;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
 /*footer*/
 .footer {
   padding-top: 60px;
