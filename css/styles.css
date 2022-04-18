@@ -101,12 +101,12 @@ address {
 .social-icon {
   width: 44px;
   height: 44px;
-  /*fill: var(--icon-primary-text-color);*/
-}
-.social-icon :hover {
-  /*fill: var(--accent-color);*/
+  fill: currentColor;
+  }  
+/*.social-icon :hover {
   fill: var(--accent-color);
-}
+  fill: var(--accent-color);
+}*/
 
 /*index.html*/
 /*логотип*/
@@ -344,19 +344,31 @@ address {
   margin-bottom: 15px;
 }
 .member-social {
-  outline: 1px solid red;
+ /* outline: 1px solid red;*/
 }
 .member-social-list {
   justify-content: center;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .member-social-link {
-  display: block;
-}
-.member-social-item {
   width: 44px;
   height: 44px;
-  outline: 1px solid red;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--primary-white);
+  color: var(--icon-primary-text-color);
+
+  /*outline: 1px solid red;*/
+}
+.member-social-link:hover,
+.member-social-link:focus { 
+  background-color: var(--accent-color);
+  color: var(--primary-white);
+}
+.member-social-item {
+  max-height: 44px;
+  /*outline: 1px solid red;*/
 }
 .member-social-item:not(:last-child) {
   margin-right: 10px;
@@ -377,8 +389,8 @@ address {
   display: block;
   color: var(--clients-border-color);
 }
-.client-item-link :hover,
-.client-item-link :focus {
+.client-item-link:hover,
+.client-item-link:focus {
   color: var(--accent-color);
 }
 .client-item-content {
@@ -399,8 +411,19 @@ address {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  max-height: 250px;
 
   background-color: var(--accent-background-color);
+}
+.footer-content {
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.footer-adress {
+  margin-right: 70px;
+
+  outline: 1px solid red;
 }
 .footer-logo {
   display: block;
@@ -413,6 +436,7 @@ address {
   text-decoration: none;
 
   margin-bottom: 20px;
+  outline: 1px solid red;
 }
 .adress-text {
   color: var(--footer-text-color);
@@ -420,6 +444,7 @@ address {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
+  outline: 1px solid red;
 }
 .location {
   color: var(--primary-white);
@@ -430,6 +455,31 @@ address {
 }
 .adress-item:not(:last-child) {
   margin-bottom: 10px;
+}
+.footer-social {
+  outline: 1px solid red;
+}
+.footer-social-title {
+  margin-bottom: 20px;
+}
+.footer-social-text {
+  display: block;
+  outline: 1px solid red;
+}
+}
+.footer-social-list {
+  justify-content: center;
+  outline: 1px solid red;
+}
+.footer-social-link {
+  display: block;
+}
+.footer-social-item {
+  max-height: 44px;
+  outline: 1px solid red;
+}
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
 }
 /*portfolio.html*/
 .portfolio {
