@@ -30,6 +30,7 @@ Roboto, normal, 400, 500, 700, 900;
   --button-hover-color: #188ce8;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --icon-primary-text-color: #afb1b8;
+  --icon-footer-bg-color: rgba(255, 255, 255, 0.1);
   --clients-border-color: #afb1b8;
 }
 body {
@@ -102,7 +103,7 @@ address {
   width: 44px;
   height: 44px;
   fill: currentColor;
-  }  
+}
 /*.social-icon :hover {
   fill: var(--accent-color);
   fill: var(--accent-color);
@@ -343,9 +344,6 @@ address {
   letter-spacing: 0.03em;
   margin-bottom: 15px;
 }
-.member-social {
- /* outline: 1px solid red;*/
-}
 .member-social-list {
   justify-content: center;
   /*outline: 1px solid red;*/
@@ -354,7 +352,6 @@ address {
   width: 44px;
   height: 44px;
   display: block;
-  box-sizing: border-box;
   border-radius: 50%;
   background-color: var(--primary-white);
   color: var(--icon-primary-text-color);
@@ -362,7 +359,7 @@ address {
   /*outline: 1px solid red;*/
 }
 .member-social-link:hover,
-.member-social-link:focus { 
+.member-social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white);
 }
@@ -416,14 +413,16 @@ address {
   background-color: var(--accent-background-color);
 }
 .footer-content {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  /*flex-direction: column;
+  flex-wrap: wrap;*/
+  align-items: baseline;
+  justify-content: left;
 }
 .footer-adress {
   margin-right: 70px;
+  justify-content: left;
 
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .footer-logo {
   display: block;
@@ -436,7 +435,7 @@ address {
   text-decoration: none;
 
   margin-bottom: 20px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .adress-text {
   color: var(--footer-text-color);
@@ -444,7 +443,7 @@ address {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .location {
   color: var(--primary-white);
@@ -457,26 +456,44 @@ address {
   margin-bottom: 10px;
 }
 .footer-social {
-  outline: 1px solid red;
-}
-.footer-social-title {
-  margin-bottom: 20px;
+  justify-content: left;
+
+  /*outline: 1px solid red;*/
 }
 .footer-social-text {
   display: block;
-  outline: 1px solid red;
-}
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white);
+
+  margin-bottom: 20px;
+  /* outline: 1px solid red;*/
 }
 .footer-social-list {
   justify-content: center;
-  outline: 1px solid red;
+  /* outline: 1px solid red;*/
 }
 .footer-social-link {
+  width: 44px;
+  height: 44px;
   display: block;
+  border-radius: 50%;
+  background-color: var(--icon-footer-bg-color);
+  color: var(--primary-white);
+
+  /*outline: 1px solid red;*/
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
 }
 .footer-social-item {
   max-height: 44px;
-  outline: 1px solid red;
+  /* outline: 1px solid red;*/
 }
 .footer-social-item:not(:last-child) {
   margin-right: 10px;
