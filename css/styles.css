@@ -303,23 +303,26 @@ address {
   max-width: 270px;
 }
 .goals-picture {
+  display: flex;
+
   width: 100%;
+  height: 120px;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--icon-goals-bg-color);
 
-  border-radius: 4px;
-
-  padding-top: 25px;
-  padding-bottom: 25px;
   margin-bottom: 30px;
 }
 .goals-icon {
   display: block;
 
   width: 70px;
-
   margin: 0 auto;
 }
+
 .goals-title {
   font-size: 14px;
   font-weight: 700;
@@ -405,6 +408,7 @@ address {
 .member-social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white);
+  outline: none;
 }
 .member-social-item {
   max-height: 44px;
@@ -533,6 +537,7 @@ address {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 .footer-social-item {
   max-height: 44px;
